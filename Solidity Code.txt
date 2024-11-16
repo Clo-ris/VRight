@@ -1,0 +1,83 @@
+//SPDX-License-Identifier: MIT
+pragma solidity ^0.8.18;
+
+contract MyFirstContract{
+    //contract code to be written here
+    //how to get name
+    string name = "Cloris";
+    uint256 mynumber = 20;
+    uint8 number2 = 1;
+    int256 number3 = -1;
+    address myaddress = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
+
+    //how you get a function 
+    function getName() public view returns (string memory) {
+        return name;
+    }
+
+    struct Person{ 
+        string name;
+        int age;
+        int height;
+        string gender;
+    }
+
+    Person[] public list_of_people; //Person have these info 
+    uint256[] public list_of_numbers;
+
+    function addPerson(string memory _name, int _age, int _height, string memory _gender) public{
+        list_of_people.push(Person(_name, _age, _height, _gender));
+    }
+    // [[cloris, 21, 163, female], [aik wei, 20, 170, male]]
+}
+
+//public and private playing around (external and interval)
+//array to store int or structs 
+//structs store difference datatype
+
+
+gas limit - just estimate gas 
+How much you intend to send the value to another person ?
+Value - keypad 
+Wei - 
+Ether - 
+
+
+
+#########################################################
+
+#Mapping 
+
+//SPDX-License-Identifier: MIT
+pragma solidity ^0.8.18;
+
+contract MyFirstContract{
+    //contract code to be written here
+    //how to get name
+    string name = "Cloris";
+    mapping (string => uint256) public studentID;
+
+    function setID(string memory _name, uint256 _id) public{
+        studentID[_name] = _id;
+    }
+
+
+    struct Person{ 
+        string name;
+        int age;
+        int height;
+        string gender;
+    }
+
+    Person[] public list_of_people; //Person have these info 
+    uint256[] public list_of_numbers;
+
+    function addPerson(string memory _name, int _age, int _height, string memory _gender) public{
+        list_of_people.push(Person(_name, _age, _height, _gender));
+    }
+    // [[cloris, 21, 163, female], [aik wei, 20, 170, male]]
+}
+
+//public and private playing around (external and interval)
+//array to store int or structs 
+//structs store difference datatype
