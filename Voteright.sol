@@ -10,7 +10,7 @@ contract SimpleVotingDApp {
     address public owner;
     Proposal[] public proposals;
     mapping(address => bool) public voters;
-,k`=-
+
     modifier onlyOwner() {
         require(msg.sender == owner, "Only owner can call this function");
         _;
